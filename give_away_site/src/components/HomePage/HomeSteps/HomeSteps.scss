@@ -1,0 +1,128 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+.steps {
+    width: 100vw;
+    min-height: 10%;
+    padding-top: 4.5rem;
+
+    p {
+        font-size: 3.1rem;
+        line-height: 4.5rem;
+        letter-spacing: -0.14rem;
+        text-align: center;
+        color: $color-dark-grey;
+        font-family: $font-base;
+    }
+
+    .svg-icon-three {
+        background-image: url("../../../assets/Decoration.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 4rem;
+        margin-bottom: 3.3rem;
+    }
+}
+
+#section-steps {
+    width: 100vw;
+    min-height: 380px;
+    padding-top: 3%;
+    background-color: $main-white;
+    padding-right: 10%;
+    padding-left: 10%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    .one-step {
+
+        height: 100px;
+        text-align: center;
+        margin-bottom: 0.8rem;
+        margin-right: 2.5%;
+        margin-left: 2.5%;
+
+        p{
+           
+            font-size: 1.5rem;
+            line-height: 2rem;
+            font-weight: 300;
+            font-family: $font-base;
+            color: $color-dark-grey;
+            width: 14rem;
+            margin-bottom: 0.8rem;
+
+        }
+        hr{
+          
+           margin: 0 auto;
+            width: 6.25rem;
+            border: 1px solid $color-light-grey;
+            margin-bottom: 0.8rem;
+        }
+
+
+    }
+    #step-one {
+        background-image: url("../../../assets/Icon-1.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100px;
+
+    }
+    #step-two {
+        background-image: url("../../../assets/Icon-2.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100px;
+
+    }
+    #step-three {
+        background-image: url("../../../assets/Icon-3.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100px;
+
+    }
+    #step-four {
+        background-image: url("../../../assets/Icon-4.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 100%;
+        min-width: 100px;
+
+    }
+}
+
+#section-give {
+    width: 100vw;
+    min-height: 30vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    background-color: white;
+   // padding-right: 10%;
+    //padding-left: 10%;
+    margin: 0 auto;
+    text-align: center;
+
+    #give-wrapper{
+        border: 0.75px solid $color-dark-grey;
+        display: inline-block;
+        padding: 1rem 7.75rem;
+        
+        .give-text{
+            font-size: 3rem;
+            line-height: 3.7rem;
+            color: $color-dark-grey;
+            font-weight: 300;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+    }
+
+}

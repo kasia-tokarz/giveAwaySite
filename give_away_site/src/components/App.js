@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.scss';
 import { Link, Switch, Route, HashRouter } from "react-router-dom";
-import Home from "./Home";
-import HowItWorks from "./HowItWorks";
+import Home from "./HomePage/Home/Home";
+
 
 function App() {
   return (
@@ -10,8 +10,9 @@ function App() {
       <HashRouter>
         <Switch>
           <Route exact path='/' component={Home} />
-          <Route path='/howitworks' component={HowItWorks}/>
+          
         </Switch>
+        
       </HashRouter>
     </>
   );

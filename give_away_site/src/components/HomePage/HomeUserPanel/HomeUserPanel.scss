@@ -1,0 +1,22 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+#user-wrapper {
+    text-align: right;
+    margin-right: 10%;
+
+    div {
+        display: inline;
+        font-size: 0.75em;
+        line-height: 79px;
+        text-align: right;
+        padding: 10px;
+        color: $color-light-grey;
+        margin-right: 10px;
+        border: 0.75px solid transparent;
+
+        &:hover {
+            border: 0.75px solid $color-accent-yellow;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+#three-columns-wrapper {
+    margin-top: 10px;
+    background-color: $color-accent-yellow;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100vw;
+    min-width: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+
+    .three-wrapper {
+        text-align: center;
+        width: 33%;
+        min-width: 10%;
+        padding-top: 2.5%;
+        padding-bottom: 4.5%;
+        padding-right: 3%;
+        padding-left: 3%;
+
+        #three-number {
+            font-size: 7.5rem;
+            line-height: 10rem;
+            font-weight: 300;
+            color: $color-accent-brown;
+        }
+
+        #three-header {
+            font-size: 1.5rem;
+            line-height: 2.5rem;
+            letter-spacing: -0.03rem;
+            color: $color-accent-brown;
+            margin-bottom: 1.5rem;
+        }
+
+        #three-text {
+            color: $color-accent-brown;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            letter-spacing: -0.02rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

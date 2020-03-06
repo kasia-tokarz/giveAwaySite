@@ -1,0 +1,89 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+
+    #background-left {
+        background-image: url("../../../assets/Home-Hero-Image.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 102% 4%;
+        width: 50vw;
+        height: 100vh;
+    }
+
+    #background-right {
+        width: 50vw;
+        height: 100vh;
+
+        
+
+        #nav-wrapper {
+            text-align: right;
+            margin-right: 10%;
+
+            div {
+                display: inline;
+                font-size: 18px;
+                line-height: 24px;
+                color: $color-dark-grey;
+                padding: 10px 15px;
+                margin-right: 5px;
+                border: 0.75px solid transparent;
+
+                &:hover {
+                    border: 0.75px solid $color-dark-grey;
+                }
+            }
+        }
+
+        #home-text {
+            margin-right: 20%;
+            text-align: center;
+            margin-top: 20%;
+            font-size: 2em;
+            line-height: 1.6em;
+            font-weight: 400;
+            letter-spacing: -0.76px;
+            color: $color-dark-grey;
+            margin-bottom: 5%;
+
+            #svg-icon {
+                background-image: url("../../../assets/Decoration.svg");
+                background-repeat: no-repeat;
+                background-size: 35%;
+                background-position: center;
+                height: 4rem;
+            }
+        }
+
+        #text-wrapper {
+            margin-right: 20%;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+
+            div {
+                align-self: center;
+                border: 0.75px solid $color-dark-grey;
+                color: $color-dark-grey;
+                font-size: 1.6em;
+                line-height: 1.2em;
+                font-weight: 300;
+                height: 4em;
+                width: 10em;
+                text-align: center;
+                padding: 1em 2em;
+
+            }
+        }
+
+
+
+
+
+    }
+}
