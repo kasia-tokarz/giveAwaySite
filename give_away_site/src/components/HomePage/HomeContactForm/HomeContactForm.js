@@ -20,8 +20,11 @@ const HomeContactForm = () => {
                     <div id="form-left"></div>
                     <div id="form-right">
                         <form>
+                            <div className="title-row">
                             <p>Skontaktuj się z nami</p>
                             <div id="vector-icon"></div>
+                            </div>
+                            
 
                             <div className="form-row">
                                 <div className="form">
@@ -48,7 +51,7 @@ const HomeContactForm = () => {
                             </div>
 
                             <div className="form-row" id="text-area-row">
-                                <div className="form">
+                                <div className="form-full">
                                     <label>Wpisz swoją wiadomość</label>
                                     <textarea
                                         type="message"
@@ -56,6 +59,13 @@ const HomeContactForm = () => {
                                         onChange={e => setMessage(e.target.value)}
                                         placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
                                     {message.length < 120 ? <p className="error-message">Podany tekst jest nieprawidłowy!</p> : ''}
+                                </div>
+                            </div>
+                            <div className="form-row">
+                                <div className="form-full">
+                                    <div className="button-wrapper">
+                                        <button>Wyślij</button>
+                                    </div>
                                 </div>
                             </div>
 
