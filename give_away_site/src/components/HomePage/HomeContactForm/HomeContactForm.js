@@ -23,7 +23,7 @@ const HomeContactForm = () => {
     }
 
     const validateMessage = () => {
-        if (message.length < 10) {
+        if (message.length < 120) {
             setMessageError(true);
             return false;
 
