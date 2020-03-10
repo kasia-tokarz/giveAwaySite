@@ -1,15 +1,93 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./HomeContactForm.scss";
 import StepsBanner from '../../Common/StepsBanner/StepsBanner';
 
 const HomeContactForm = () => {
     const [name, setName] = useState("");
+    const [nameError, setNameError] = useState(false);
     const [email, setEmail] = useState("");
+    const [emailError, setEmailError] = useState(false);
     const [message, setMessage] = useState("");
+    const [messageError, setMessageError] = useState(false);
 
-    const validateEmail = (email) => {
+
+
+    const validateName = () => {
+        if (name.trim().length !== name.trim().split(' ').join('').length) {
+            setNameError(true);
+            return false;
+        } else {
+            setNameError(false);
+            return true;
+        }
+    }
+
+    const validateMessage = () => {
+        if (message.length < 10) {
+            setMessageError(true);
+            return false;
+
+
+        }
+
+        setMessageError(false);
+        return true;
+    }
+
+    const validateEmail = () => {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(email);
+        const result = re.test(email);
+
+        setEmailError(!result);
+        return result;
+
+    }
+
+    useEffect(() => {
+        
+
+
+
+
+
+
+
+    });
+
+    const validateAndSubmit = (ev) => {
+        ev.preventDefault();
+        if (validateName() && validateEmail() && validateMessage()) {
+            
+            fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
+                method: "POST",
+                body: JSON.stringify({
+                    name,
+                    email,
+                    message
+                }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error("Błąd sieci!");
+                    }
+                })
+                .then(data => {
+                    alert("saved!");
+                })
+                .catch(err => {
+                    alert("Pojawiły się błędy - " + err.message);
+                });
+
+        }
+
+
+
+
     }
 
     return (
@@ -18,7 +96,7 @@ const HomeContactForm = () => {
                 <div id="form-wrapper">
                     <div id="form-left"></div>
                     <div id="form-right">
-                        <form>
+                        <form onSubmit={validateAndSubmit}>
                             <div className="title-row">
                                 <p>Skontaktuj się z nami</p>
                                 <div id="vector-icon"></div>
@@ -32,7 +110,7 @@ const HomeContactForm = () => {
                                         value={name}
                                         onChange={e => setName(e.target.value)}
                                         placeholder="Krzysztof" />
-                                    {name.length > 0 ? <p className="error-message">Podane imie jest nieprawidłowe!</p> : ''}
+                                    {nameError ? <p className="error-message">Podane imie jest nieprawidłowe!</p> : ''}
                                 </div>
 
                                 <div className="form">
@@ -42,7 +120,7 @@ const HomeContactForm = () => {
                                         value={email}
                                         onChange={e => setEmail(e.target.value)}
                                         placeholder="abc@xyz.pl" />
-                                    {validateEmail(email) ? <p className="error-message">Podany email jest nierpawidlowy!</p> : ''}
+                                    {emailError ? <p className="error-message">Podany email jest nierpawidlowy!</p> : ''}
                                 </div>
                             </div>
 
@@ -54,7 +132,7 @@ const HomeContactForm = () => {
                                         value={message}
                                         onChange={e => setMessage(e.target.value)}
                                         placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
-                                    {message.length < 120 ? <p className="error-message">Podany tekst jest nieprawidłowy!</p> : ''}
+                                    {messageError ? <p className="error-message">Podany tekst jest nieprawidłowy!</p> : ''}
                                 </div>
                             </div>
                             <div className="form-row">
