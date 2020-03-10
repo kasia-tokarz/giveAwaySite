@@ -210,6 +210,13 @@
                     flex-direction: column;
                     display: flex;
 
+                    p.successMessage {
+                        font-size: 1em;
+                        letter-spacing: 1px;
+                        color: green;
+                        line-height: 20px;
+                    }
+
                     p {
                         font-size: 2.8rem;
                         line-height: 4.5rem;
@@ -315,10 +322,10 @@
                                 font-weight: bold;
                                 border: 0.75px solid $color-dark-grey;
 
-                                &:focus{
+                                &:focus {
                                     outline: none;
                                 }
-                                
+
                                 &:hover {
                                     border: 2px solid $color-dark-grey;
                                 }

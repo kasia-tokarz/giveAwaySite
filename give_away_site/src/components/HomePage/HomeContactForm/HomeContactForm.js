@@ -9,8 +9,7 @@ const HomeContactForm = () => {
     const [emailError, setEmailError] = useState(false);
     const [message, setMessage] = useState("");
     const [messageError, setMessageError] = useState(false);
-
-
+    const [sendSuccess, setSendSuccess] = useState(false);
 
     const validateName = () => {
         if (name.trim().length !== name.trim().split(' ').join('').length) {
@@ -26,8 +25,6 @@ const HomeContactForm = () => {
         if (message.length < 120) {
             setMessageError(true);
             return false;
-
-
         }
 
         setMessageError(false);
@@ -40,19 +37,7 @@ const HomeContactForm = () => {
 
         setEmailError(!result);
         return result;
-
     }
-
-    useEffect(() => {
-        
-
-
-
-
-
-
-
-    });
 
     const validateAndSubmit = (ev) => {
         ev.preventDefault();
@@ -77,10 +62,13 @@ const HomeContactForm = () => {
                     }
                 })
                 .then(data => {
-                    alert("saved!");
+                    setSendSuccess(true);
+                    setName('');
+                    setEmail('');
+                    setMessage('');
                 })
                 .catch(err => {
-                    alert("Pojawiły się błędy - " + err.message);
+                    setSendSuccess(false);
                 });
 
         }
@@ -100,6 +88,7 @@ const HomeContactForm = () => {
                             <div className="title-row">
                                 <p>Skontaktuj się z nami</p>
                                 <div id="vector-icon"></div>
+                                {sendSuccess? <p className="successMessage">Wiadomość została wysłana! wkrótce się skontaktujemy</p> : ''}
                             </div>
 
                             <div className="form-row">
