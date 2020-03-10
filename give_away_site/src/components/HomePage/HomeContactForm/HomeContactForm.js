@@ -14,17 +14,15 @@ const HomeContactForm = () => {
 
     return (
         <>
-
             <div id="form-section">
                 <div id="form-wrapper">
                     <div id="form-left"></div>
                     <div id="form-right">
                         <form>
                             <div className="title-row">
-                            <p>Skontaktuj się z nami</p>
-                            <div id="vector-icon"></div>
+                                <p>Skontaktuj się z nami</p>
+                                <div id="vector-icon"></div>
                             </div>
-                            
 
                             <div className="form-row">
                                 <div className="form">
@@ -36,8 +34,6 @@ const HomeContactForm = () => {
                                         placeholder="Krzysztof" />
                                     {name.length > 0 ? <p className="error-message">Podane imie jest nieprawidłowe!</p> : ''}
                                 </div>
-
-
 
                                 <div className="form">
                                     <label>Wpisz swój email</label>
@@ -68,18 +64,10 @@ const HomeContactForm = () => {
                                     </div>
                                 </div>
                             </div>
-
-
-
-
-
-
                         </form>
-
                     </div>
                 </div>
             </div>
-
         </>
     );
 };
