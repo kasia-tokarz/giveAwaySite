@@ -5,20 +5,18 @@ import "./Home.scss";
 import HomeSteps from '../HomeSteps/HomeSteps';
 import HomeAbout from '../HomeAbout/HomeAbout';
 import HomeUserPanel from '../HomeUserPanel/HomeUserPanel';
+import HomeHelpOptions from '../HomeHelpOptions/HomeHelpOptions';
+import HomeContactForm from '../HomeContactForm/HomeContactForm';
 
 
 
 const Home = () => {
     return (
         <>
-            <HomeHeader />
-
             <div id="wrapper">
                 <div id="background-left"></div>
                 <div id="background-right">
-
                     <HomeUserPanel />
-
                     <div id="nav-wrapper">
                         <div>Start</div>
                         <div>O co chodzi?</div>
@@ -36,14 +34,13 @@ const Home = () => {
                         <div>ODDAJ RZECZY</div>
                         <div>ZORGANIZUJ ZBIÓRKĘ</div>
                     </div>
-
                 </div>
             </div>
             <HomeThreeColumns />
-            <HomeSteps />
+            <HomeSteps/>
             <HomeAbout />
-
-
+            <HomeHelpOptions />
+            <HomeContactForm />
         </>
     );
 };

@@ -1,13 +1,11 @@
 import React from 'react';
 import "./HomeSteps.scss"
+import StepsBanner from '../../Common/StepsBanner/StepsBanner';
 
 const HomeSteps = () => {
     return (
         <>
-            <div className="steps">
-                <p>Wystarczą 4 proste kroki</p>
-                <div className="svg-icon-three"></div>
-            </div>
+            <StepsBanner title="Wystarczą 4 proste kroki"/>
 
             <div id="section-steps">
                 <div className="one-step" >

@@ -1,0 +1,25 @@
+@import "../../../scss/settings/colors";
+@import "../../../scss/settings/fonts";
+
+.steps {
+    width: 100vw;
+    min-height: 10%;
+    padding-top: 4.5rem;
+
+    p {
+        font-size: 3.1rem;
+        line-height: 4.5rem;
+        letter-spacing: -0.14rem;
+        text-align: center;
+        color: $color-dark-grey;
+        font-family: $font-base;
+    }
+
+    .svg-icon-three {
+        background-image: url("../../../assets/Decoration.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        min-height: 4rem;
+        margin-bottom: 3.3rem;
+    }
+}
