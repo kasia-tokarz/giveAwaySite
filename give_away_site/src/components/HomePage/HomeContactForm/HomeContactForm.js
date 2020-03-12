@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./HomeContactForm.scss";
 import StepsBanner from '../../Common/StepsBanner/StepsBanner';
-
 const HomeContactForm = () => {
     const [name, setName] = useState("");
     const [nameError, setNameError] = useState(false);
@@ -10,7 +9,6 @@ const HomeContactForm = () => {
     const [message, setMessage] = useState("");
     const [messageError, setMessageError] = useState(false);
     const [sendSuccess, setSendSuccess] = useState(false);
-
     const validateName = () => {
         if (name.trim().length !== name.trim().split(' ').join('').length) {
             setNameError(true);
@@ -20,29 +18,23 @@ const HomeContactForm = () => {
             return true;
         }
     }
-
     const validateMessage = () => {
         if (message.length < 120) {
             setMessageError(true);
             return false;
         }
-
         setMessageError(false);
         return true;
     }
-
     const validateEmail = () => {
         var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         const result = re.test(email);
-
         setEmailError(!result);
         return result;
     }
-
     const validateAndSubmit = (ev) => {
         ev.preventDefault();
         if (validateName() && validateEmail() && validateMessage()) {
-            
             fetch("https://fer-api.coderslab.pl/v1/portfolio/contact", {
                 method: "POST",
                 body: JSON.stringify({
@@ -70,14 +62,8 @@ const HomeContactForm = () => {
                 .catch(err => {
                     setSendSuccess(false);
                 });
-
         }
-
-
-
-
     }
-
     return (
         <>
             <div id="form-section">
@@ -88,9 +74,8 @@ const HomeContactForm = () => {
                             <div className="title-row">
                                 <p>Skontaktuj się z nami</p>
                                 <div id="vector-icon"></div>
-                                {sendSuccess? <p className="successMessage">Wiadomość została wysłana! wkrótce się skontaktujemy</p> : ''}
+                                {sendSuccess ? <p className="successMessage">Wiadomość została wysłana! wkrótce się skontaktujemy</p> : ''}
                             </div>
-
                             <div className="form-row">
                                 <div className="form">
                                     <label>Wpisz swoje imię</label>
@@ -101,7 +86,6 @@ const HomeContactForm = () => {
                                         placeholder="Krzysztof" />
                                     {nameError ? <p className="error-message">Podane imie jest nieprawidłowe!</p> : ''}
                                 </div>
-
                                 <div className="form">
                                     <label>Wpisz swój email</label>
                                     <input
@@ -112,7 +96,6 @@ const HomeContactForm = () => {
                                     {emailError ? <p className="error-message">Podany email jest nierpawidlowy!</p> : ''}
                                 </div>
                             </div>
-
                             <div className="form-row" id="text-area-row">
                                 <div className="form-full">
                                     <label>Wpisz swoją wiadomość</label>
@@ -138,5 +121,4 @@ const HomeContactForm = () => {
         </>
     );
 };
-
 export default HomeContactForm;

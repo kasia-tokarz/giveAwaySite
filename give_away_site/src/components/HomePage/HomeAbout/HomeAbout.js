@@ -1,10 +1,9 @@
 import React from 'react';
 import "./HomeAbout.scss";
-
 const HomeAbout = () => {
     return (
         <>
-          <div id="about-section">
+            <div id="about-section">
                 <div id="about-left">
                     <p id="about-header">O nas</p>
                     <div id="svg-icon-about"></div>
@@ -12,9 +11,8 @@ const HomeAbout = () => {
                     <span id="about-sign"></span>
                 </div>
                 <div id="about-right"></div>
-            </div>  
+            </div>
         </>
     );
 };
-
 export default HomeAbout;

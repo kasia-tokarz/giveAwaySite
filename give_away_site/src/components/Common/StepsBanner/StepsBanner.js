@@ -1,6 +1,5 @@
 import React from 'react';
 import "./StepsBanner.scss";
-
 const StepsBanner = ({ title }) => {
     return (
         <>
@@ -11,5 +10,4 @@ const StepsBanner = ({ title }) => {
         </>
     );
 };
-
 export default StepsBanner;

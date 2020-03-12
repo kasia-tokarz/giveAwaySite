@@ -4,15 +4,20 @@
 
 #section-help {
     margin: 0 10%;
+
     #banner-choose {
         display: flex;
         justify-content: space-between;
         margin: 0 5%;
 
-        div:first-child{
+        div:first-child {
             padding: 2em 4em;
         }
-    
+
+        .active {
+            border: 1px solid $color-dark-grey;
+        }
+
         div {
             text-align: center;
             margin: 0 auto;
@@ -22,13 +27,14 @@
             padding: 1em 4em;
             text-align: center;
 
-            &:hover{
+            &:hover {
                 border: 1px solid $color-dark-grey;
             }
+            
         }
     }
 
-    #help-text{
+    #help-text {
         text-align: center;
         font-size: 1.1em;
         line-height: 1.6em;
@@ -38,6 +44,7 @@
 
     ul {
         list-style: none;
+
         .header-list {
             display: inline-block;
             text-align: left;
@@ -48,7 +55,8 @@
             margin-top: 0.8em;
             font-weight: 300;
         }
-        .help-list{
+
+        .help-list {
             padding-top: 2.4em;
             float: right;
             font-size: 1.1em;
@@ -58,7 +66,8 @@
             font-family: $font-alt;
             display: inline-block;
         }
-        .inner-text{
+
+        .inner-text {
             display: block;
             text-align: left;
             font-size: 1.1em;
@@ -69,25 +78,26 @@
             margin-bottom: 1.5em;
         }
     }
+
     #help-toogle {
         display: flex;
         justify-content: space-between;
         padding: 1em 35em;
-       
+
         .toogle-list {
             border: 1px solid transparent;
-           height: 50px;
-           width: 50px;
+            height: 50px;
+            width: 50px;
             font-size: 1em;
             //line-height: 2em;
             color: $color-dark-grey;
             text-align: center;
             align-self: center;
             padding-top: 0.8em;
+
             &:hover {
                 border: 1px solid #707070;
             }
         }
     }
 }
-

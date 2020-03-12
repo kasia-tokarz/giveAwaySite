@@ -1,11 +1,9 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/fonts";
-
 #wrapper {
     width: 100vw;
     height: 100vh;
     display: flex;
-
     #background-left {
         background-image: url("../../../assets/Home-Hero-Image.jpg");
         background-repeat: no-repeat;
@@ -14,17 +12,12 @@
         width: 50vw;
         height: 100vh;
     }
-
     #background-right {
         width: 50vw;
         height: 100vh;
-
-        
-
         #nav-wrapper {
             text-align: right;
             margin-right: 10%;
-
             div {
                 display: inline;
                 font-size: 18px;
@@ -33,13 +26,11 @@
                 padding: 10px 15px;
                 margin-right: 5px;
                 border: 0.75px solid transparent;
-
                 &:hover {
                     border: 0.75px solid $color-dark-grey;
                 }
             }
         }
-
         #home-text {
             margin-right: 20%;
             text-align: center;
@@ -50,7 +41,6 @@
             letter-spacing: -0.76px;
             color: $color-dark-grey;
             margin-bottom: 5%;
-
             #svg-icon {
                 background-image: url("../../../assets/Decoration.svg");
                 background-repeat: no-repeat;
@@ -59,13 +49,14 @@
                 height: 4rem;
             }
         }
-
         #text-wrapper {
             margin-right: 20%;
             text-align: center;
             display: flex;
             justify-content: space-between;
-
+            a{
+                text-decoration: none;
+            }
             div {
                 align-self: center;
                 border: 0.75px solid $color-dark-grey;
@@ -77,13 +68,7 @@
                 width: 10em;
                 text-align: center;
                 padding: 1em 2em;
-
             }
         }
-
-
-
-
-
     }
 }
