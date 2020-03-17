@@ -1,89 +1,92 @@
 @import "../../../scss/settings/colors";
 @import "../../../scss/settings/fonts";
 
-#section-steps {
+#steps-wrapper {
     width: 100vw;
-    min-height: 380px;
-    padding-top: 3%;
-    background-color: $main-white;
-    padding-right: 10%;
-    padding-left: 10%;
-    display: flex;
-    justify-content: space-between;
-    margin: 0 auto;
-    .one-step {
-        height: 100px;
-        text-align: center;
-        margin-bottom: 0.8rem;
-        margin-right: 2.5%;
-        margin-left: 2.5%;
-        p {
-            font-size: 1.5rem;
-            line-height: 2rem;
-            font-weight: 300;
-            font-family: $font-base;
-            color: $color-dark-grey;
-            width: 14rem;
-            margin-bottom: 0.8rem;
-        }
-        hr {
-            margin: 0 auto;
-            width: 6.25rem;
-            border: 1px solid $color-light-grey;
-            margin-bottom: 0.8rem;
-        }
-    }
-    #step-one {
-        background-image: url("../../../assets/Icon-1.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 100%;
-        min-width: 100px;
-    }
-    #step-two {
-        background-image: url("../../../assets/Icon-2.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 100%;
-        min-width: 100px;
-    }
-    #step-three {
-        background-image: url("../../../assets/Icon-3.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 100%;
-        min-width: 100px;
-    }
-    #step-four {
-        background-image: url("../../../assets/Icon-4.svg");
-        background-repeat: no-repeat;
-        background-position: center;
-        min-height: 100%;
-        min-width: 100px;
-    }
-}
-#section-give {
-    width: 100vw;
-    min-height: 30vh;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    background-color: white;
-    margin: 0 auto;
-    text-align: center;
-    #give-wrapper {
-        border: 0.75px solid $color-dark-grey;
-        display: inline-block;
-        padding: 1rem 7.75rem;
-        a{
-            text-decoration: none;
-        }
-        .give-text {
-            font-size: 3rem;
-            line-height: 3.7rem;
-            color: $color-dark-grey;
-            font-weight: 300;
-            margin: 0 auto;
+    height: 100vh;
+    #section-steps {
+        width: 100vw;
+        height: 36vh;
+        background-color: $main-white;
+        padding-right: 10%;
+        padding-left: 10%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        .one-step {
             text-align: center;
+            align-self: center;
+            p {
+                font-size: 1.5rem;
+                line-height: 2rem;
+                font-weight: 300;
+                font-family: $font-base;
+                color: $color-dark-grey;
+                width: 14rem;
+                margin-bottom: 0.8rem;
+            }
+            hr {
+                margin: 0 auto;
+                width: 6.25rem;
+                border: 1px solid $color-light-grey;
+                margin-bottom: 0.8rem;
+            }
+        }
+        #step-one {
+            background-image: url("../../../assets/Icon-1.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 80px;
+            min-width: 100px;
+        }
+        #step-two {
+            background-image: url("../../../assets/Icon-2.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 84px;
+            min-width: 100px;
+        }
+        #step-three {
+            background-image: url("../../../assets/Icon-3.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 80px;
+            min-width: 100px;
+        }
+        #step-four {
+            background-image: url("../../../assets/Icon-4.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: 80px;
+            min-width: 100px;
+        }
+    }
+    #section-give {
+        width: 100vw;
+        min-height: 32vh;
+        display: flex;
+        justify-content: center;
+        background-color: white;
+        margin: 0 auto;
+        text-align: center;
+        a {
+            align-self: center;
+        }
+        #give-wrapper {
+            border: 0.75px solid $color-dark-grey;
+            display: inline-block;
+            padding: 1rem 7.75rem;
+            a{
+                text-decoration: none;
+            }
+            .give-text {
+                font-size: 2.2rem;
+                line-height: 3.7rem;
+                color: $color-dark-grey;
+                font-weight: 300;
+                margin: 0 auto;
+                text-align: center;
+            }
         }
     }
 }

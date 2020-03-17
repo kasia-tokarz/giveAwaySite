@@ -26,13 +26,13 @@ const Home = () => {
                 <div id="background-left"></div>
                 <div id="background-right">
                     <HomeUserPanel />
-                    <div id="nav-wrapper">
-                        <div>Start</div>
-                        <div onClick={() => executeScroll('homeSteps')}>O co chodzi?</div>
-                        <div onClick={() => executeScroll('aboutUs')}>O nas</div>
-                        <div onClick={() => executeScroll('fundation')}>Fundacja i organizacje</div>
-                        <div onClick={() => executeScroll('form')}>Kontakt</div>
-                    </div>
+                    <nav id="nav-wrapper">
+                        <a>Start</a>
+                        <a onClick={() => executeScroll('homeSteps')}>O co chodzi?</a>
+                        <a onClick={() => executeScroll('aboutUs')}>O nas</a>
+                        <a onClick={() => executeScroll('fundation')}>Fundacja i organizacje</a>
+                        <a onClick={() => executeScroll('form')}>Kontakt</a>
+                    </nav>
                     <div id="home-text">
                         <p>Zacznij pomagć! </p>
                         <p>Oddaj niechciane rzeczy w zaufane ręce</p>

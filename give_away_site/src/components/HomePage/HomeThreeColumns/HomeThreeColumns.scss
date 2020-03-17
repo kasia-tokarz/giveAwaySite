@@ -3,6 +3,10 @@
 #three-columns-wrapper {
     margin-top: 10px;
     background-color: $color-accent-yellow;
+    background-image: url("../../../assets/threeColumns.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;

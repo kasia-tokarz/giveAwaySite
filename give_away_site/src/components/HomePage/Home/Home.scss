@@ -18,7 +18,7 @@
         #nav-wrapper {
             text-align: right;
             margin-right: 10%;
-            div {
+            a {
                 display: inline;
                 font-size: 18px;
                 line-height: 24px;
@@ -28,6 +28,7 @@
                 border: 0.75px solid transparent;
                 &:hover {
                     border: 0.75px solid $color-dark-grey;
+                    cursor: pointer;
                 }
             }
         }
@@ -53,7 +54,12 @@
             margin-right: 20%;
             text-align: center;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            
+            a:first-child {
+                margin-right: 3rem;
+            }
+            
             a{
                 text-decoration: none;
             }
@@ -68,6 +74,10 @@
                 width: 10em;
                 text-align: center;
                 padding: 1em 2em;
+                :hover {
+                    cursor: pointer;
+                    border: 0.75px solid $color-accent-yellow;
+                }
             }
         }
     }
